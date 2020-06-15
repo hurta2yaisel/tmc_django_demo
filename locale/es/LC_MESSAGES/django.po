@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-15 15:18-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "TMC Query Demo"
+msgstr ""
+
+msgid "Credit Amount"
+msgstr "Monto Crédito"
+
+msgid "Credit Term"
+msgstr "Plazo Crédito"
+
+msgid "Overdue Days"
+msgstr "Días Mora"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Query"
+msgstr "Consultar"
+
+msgid "Reset"
+msgstr "Resetear"
+
+#, fuzzy, python-brace-format
+#| msgid "Date must be between dates {min_date} and {max_date}"
+msgid "date must be between dates {min_date} and {max_date}"
+msgstr "Fecha debe estar entre las fechas {min_date} y {max_date}"
+
+#, python-format
+msgid "Error getting TMCs. %s"
+msgstr "Error obteniendo las TMCs. %s"
+
+msgid "Value"
+msgstr "Valor"
+
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+msgid "End Date"
+msgstr "Fecha Fin"
+
+msgid "TMC Type"
+msgstr "Tipo TMC"
+
+msgid "Created at"
+msgstr "Creado en"
+
+msgid "Updated at"
+msgstr "Actualizado en"
+
+msgid "TMC"
+msgstr ""
+
+msgid "TMCs"
+msgstr ""
+
+msgid "Code"
+msgstr "Código"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Subtitle"
+msgstr "Subtítulo"
+
+msgid "TMC Types"
+msgstr "Tipos de TMC"
+
+msgid "TMC Code"
+msgstr "Código TMC"
+
+msgid "Prev Credit Amount"
+msgstr "Monto Prev Crédito"
+
+msgid "Amount TMC"
+msgstr "Monto TMC"
+
+msgid "New Amount"
+msgstr "Nuevo Monto"
+
+msgid "OK"
+msgstr ""
+
+msgid "TMC Not Found"
+msgstr "TMC No Encontrada"
+
+msgid "English"
+msgstr "Inglés"
+
+msgid "Spanish"
+msgstr "Español"

@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+requests = "*"
+django = "==3"
+python-dateutil = "*"
+django-crispy-forms = "*"
+celery = "*"
+django-redis = "*"
+gunicorn = "*"
+
+[requires]
+python_version = "3.8"
