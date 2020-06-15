@@ -40,12 +40,12 @@ class TMCQueryForm(forms.Form):
         self.helper.form_method = 'post'
         self.helper.layout = Layout(
             Row(
-                Column('credit_amount', css_class='form-group col-6'),
-                Column('credit_term', css_class='form-group col-6')
+                Column('credit_amount', css_class='form-group col-md-6 col-sm-12 '),
+                Column('credit_term', css_class='form-group col-md-6 col-sm-12 ')
             ),
             Row(
-                Column('overdue_days', css_class='form-group col-6'),
-                Column('date', css_class='form-group col-6')
+                Column('overdue_days', css_class='form-group col-md-6 col-sm-12'),
+                Column('date', css_class='form-group col-md-6 col-sm-12')
             ),
             Submit('submit', _('Query')),
             Reset('reset', _('Reset')),
