@@ -1,3 +1,3 @@
-# TMC Query Demo
+# TMC Django Demo
 
 ![Screenshot](screenshot.png)
