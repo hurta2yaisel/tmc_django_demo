@@ -4,26 +4,15 @@ from django.utils.translation import ugettext_lazy as _
 
 # Create your models here.
 class TMC(models.Model):
-    value = models.FloatField(verbose_name=_("Value"), blank=False, null=False)
-    start_date = models.DateField(verbose_name=_("Start Date"), blank=False,
-                                  null=False)
-    end_date = models.DateField(verbose_name=_("End Date"), blank=False,
-                                null=False)
-    tmc_type = models.ForeignKey('tmc.TMCType', on_delete=models.CASCADE,
-                                 verbose_name=_("TMC Type"),
-                                 blank=False,
-                                 null=False)
-    created_at = models.DateTimeField(
-        _("Created at"),
-        auto_now=False,
-        auto_now_add=True
-    )
+    value = models.FloatField(verbose_name=_("Value"))
+    start_date = models.DateField(verbose_name=_("Start Date"))
+    end_date = models.DateField(verbose_name=_("End Date"))
+    tmc_type = models.ForeignKey(
+    "tmc.TMCType", on_delete=models.CASCADE, verbose_name=_("TMC Type")
+)
+    created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
 
-    updated_at = models.DateTimeField(
-        _("Updated at"),
-        auto_now=True,
-        auto_now_add=False
-    )
+    updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
 
     def __str__(self):
         return "{tmc_type}. {start_date} a {end_date}".format(
@@ -39,23 +28,12 @@ class TMC(models.Model):
 
 
 class TMCType(models.Model):
-    code = models.IntegerField(verbose_name=_("Code"), unique=True,
-                               db_index=True, blank=False, null=False)
-    title = models.CharField(verbose_name=_("Title"), max_length=255,
-                             blank=False, null=False)
-    subtitle = models.CharField(verbose_name=_("Subtitle"), max_length=255,
-                                blank=False, null=False)
-    created_at = models.DateTimeField(
-        _("Created at"),
-        auto_now=False,
-        auto_now_add=True
-    )
+    code = models.IntegerField(verbose_name=_("Code"), unique=True, db_index=True)
+    title = models.CharField(verbose_name=_("Title"), max_length=255)
+    subtitle = models.CharField(verbose_name=_("Subtitle"), max_length=255)
+    created_at = models.DateTimeField(_("Created at"), auto_now_add=True)
 
-    updated_at = models.DateTimeField(
-        _("Updated at"),
-        auto_now=True,
-        auto_now_add=False
-    )
+    updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
 
     def __str__(self):
         return "{code}. {title}. {subtitle}".format(
