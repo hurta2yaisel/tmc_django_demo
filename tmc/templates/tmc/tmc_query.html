@@ -7,9 +7,6 @@
             <br><br>
             <span>
             {% if  query_result == 'OK' %}
-                {% if tmc_type_code %}
-                    {% trans "TMC Code" %}: <b>{{ tmc_type_code }}</b>.
-                {% endif %}
                 {% if credit_amount %}
                     {% trans "Prev Credit Amount" %}: <b>{{ credit_amount }}</b>.
                 {% endif %}
@@ -18,6 +15,12 @@
                 {% endif %}
                 {% if credit_with_tmc %}
                     {% trans "New Amount" %}: <b>{{ credit_with_tmc }}</b>.
+                {% endif %}
+                {% if tmc_type_code %}
+                    <br>{% trans "TMC Code" %}: <b>{{ tmc_type_code }}</b>.
+                {% endif %}
+                {% if tmc_type_value %}
+                    {% trans "TMC Value" %}: <b>{{ tmc_type_value }}</b>.
                 {% endif %}
                 {% if tmc_type_desc %}
                     <br><br><i>{{ tmc_type_desc }}</i>.

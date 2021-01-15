@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+import dj_database_url
 from celery.schedules import crontab
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7sh*=)9w^3iuwvh6i8)@hte%!=+pz&j^m23_ge8@)e_co4y_a)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['tmc-django-demo.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['tmc-django-demo.herokuapp.com', '127.0.0.1', '127.0.0.1:8000']
 
 # Application definition
 
@@ -75,13 +76,20 @@ WSGI_APPLICATION = 'tmc_django_demo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+DB_ENGINE = 'django.db.backends.postgresql'
 
+DATABASES = {
+    'default': dj_database_url.config(
+        engine=DB_ENGINE,
+        default=os.getenv('DATABASE_URL')
+    )
+}
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -102,6 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
+
 gettext_noop = lambda s: s
 
 LANGUAGES = [

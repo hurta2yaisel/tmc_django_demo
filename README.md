@@ -1,1 +1,3 @@
-# tmc_django_demo
+# TMC Django Demo
+
+![Screenshot](screenshot.png)

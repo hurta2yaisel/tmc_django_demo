@@ -63,6 +63,7 @@ class TMCQueryView(generic.FormView):
                 kwargs.update({
                     'query_result': _('OK'),
                     'tmc_type_code': tmc_type_code,
+                    'tmc_type_value': tmc_value,
                     'credit_amount': credit_amount,
                     'credit_tmc': credit_tmc,
                     'credit_with_tmc': credit_with_tmc,

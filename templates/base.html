@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% trans "TMC Query Demo" %}</title>
+    <title>{% trans "TMC Django Demo" %}</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -28,8 +28,9 @@
 <body>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-8">
-            <h1 class="mt-2"><a href="{% url 'tmc-query' %}">{% trans "TMC Query Demo" %}</a></h1>
+        <div class="col-md-8 col-sm-8">
+            <h1 class="mt-2"><a href="{% url 'tmc-query' %}">{% trans "TMC Django Demo" %}</a></h1>
+            <h6><i>{% trans "Credits are assumed as non-adjustable operations in UF" %}</i></h6>
             <hr class="mt-0 mb-4">
             {% block content %}
             {% endblock %}
