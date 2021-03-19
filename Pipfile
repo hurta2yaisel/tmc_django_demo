@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 requests = "*"
-django = "==3.0.7"
+django = "==3.1.6"
 python-dateutil = "*"
 django-crispy-forms = "*"
 celery = "*"
